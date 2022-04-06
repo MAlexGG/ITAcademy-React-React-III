@@ -15,8 +15,32 @@ export const CtContent = styled.div`
     align-items: center;
 `;
 
+export const CtLogo = styled.div`
+    display: flex;
+`;
+
 export const ImgPrincipal = styled.img`
     width: 65vw;
+`;
+
+export const CtLogin = styled.div`
+    display: flex;
+    align-items: center;
+    height: 20px;
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    margin-right: 17vw;
+    margin-top: 50px;
+`;
+
+export const BtLogin = styled.button`
+    border: none;
+    background-color: transparent;
+    color: #6E6E6E;
+    &:hover{
+        color: white;
+    }
 `;
 
 export const CtInfo = styled.div`
@@ -36,6 +60,7 @@ export const BtStarships = styled.button`
     width: 150px;
     height: 180px;
     border-radius: 10px;
+    cursor: pointer;
     &:hover 
     {
       background-color: #6E6E6E;
