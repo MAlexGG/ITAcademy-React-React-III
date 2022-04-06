@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@font-face {
+    font-family: DeathStar;
+    src: local("Death Star"), local("HelveticaNeue-Bold"), url(./assets/fonts/Death\ Star.otf);
+}
+
 .App {
     text-align: center;
     color: #6E6E6E;

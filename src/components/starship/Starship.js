@@ -4,6 +4,7 @@ import { apiStarwars } from '../../services/apiStarwars';
 import notFoundImg from '../../assets/img/notFoundImg.jpg';
 import { CtImg, CtShipCard, CtSubText, CtText, ImgShip, Text } from './Starship.styled';
 import Header from '../header/Header';
+import Loader from '../loader/Loader';
 
 export default function Starship() {
 
@@ -11,21 +12,25 @@ export default function Starship() {
   const location = useLocation();
   const { ship } = location.state;
   const [imageExists, setImageExists] = useState(false);
+  const [loading, setLoading] = useState(false);
   
   const url = ship.url;
   const regex = /(\d+)/g;
   const shipId = parseInt(url.match(regex));
 
   api.getShipImg(shipId).then((res) => {
+    setLoading(true);
     if (res.status === 200) {
-      setImageExists(true)
+      setImageExists(true);
+      setLoading(false);
     }
   }).catch(error => console.log(error.response.statusText));
 
   return (
     <>
       <CtShipCard> 
-        <Header/>
+        <Header />
+        {loading && <Loader/>}
         <CtImg>
           {
             imageExists ? <ImgShip src={`https://starwars-visualguide.com/assets/img/starships/${shipId}.jpg`} alt={`${ship.name} starship figure`}/> : <ImgShip src={notFoundImg} alt='figure not found'/>
@@ -35,7 +40,8 @@ export default function Starship() {
         <CtText>
           <h2>{(ship.name).toUpperCase()}</h2> 
         </CtText>  
-          <CtSubText>
+
+        <CtSubText>
             <div>
               <Text>Model: {ship.model}</Text>
               <Text>MGLT: {ship.MGLT}</Text>
@@ -52,8 +58,8 @@ export default function Starship() {
               <Text>Passengers: {ship.passengers}</Text>
               <Text>Starship class: {ship.starship_class}</Text>
             </div>
-            
         </CtSubText>
+        
      </CtShipCard>
     </>
   )

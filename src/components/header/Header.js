@@ -8,9 +8,9 @@ export default function Header() {
     <>
         <Logo src={SWLogo} alt='star wars logo' />
         <CtNavBar>
-            <PageNavBar>HOME</PageNavBar>
+            <Link to={'/'} className='navBar'><PageNavBar>HOME</PageNavBar></Link>
             <div>|</div>
-            <Link to={'/'} className='navBar'><PageNavBar>STARSHIPS</PageNavBar></Link>
+            <Link to={'/starships'} className='navBar'><PageNavBar>STARSHIPS</PageNavBar></Link>
         </CtNavBar>
     </>
   )

@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { apiStarwars } from '../../services/apiStarwars';
 import Header from '../header/Header';
+import Loader from '../loader/Loader';
 import { BtViewMore, CtStarship, CtStarships } from './Starships.styled';
 
 
@@ -9,17 +10,19 @@ export default function Starships() {
 
   const [list, setList] = useState([]);
   const [page, setPage] = useState(1);
+  const [loading, setLoading] = useState(false);
+
   const api = apiStarwars();
   const next = useRef();
 
   useEffect(() => {
+    setLoading(true);
     api.getShips(page).then((res) => {
       setList([...list, res.data.results]);
       next.current = (res.data.next);
+      setLoading(false);
     }).catch((error) => error);
   }, [page]);
-
-  console.log(list);
   
   const viewMore = () => {
     setPage(page + 1);
@@ -28,7 +31,8 @@ export default function Starships() {
   return (
     <>
       <CtStarships>
-        <Header/>
+        <Header />
+        {loading && <Loader/>}
         {
           list.map((item) => (
             item.map((ship, index) => (
