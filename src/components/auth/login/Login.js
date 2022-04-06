@@ -24,6 +24,7 @@ export default function Login() {
 
   const handleReset = () => {
     localStorage.removeItem('form');
+    navigate('/', { replace: true });
   };
 
   return (

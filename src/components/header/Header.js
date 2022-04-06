@@ -26,7 +26,7 @@ export default function Header() {
             :
             <Link to='/login'><BtLogin>Log in</BtLogin></Link>
           }
-          <div> // </div>
+          <div> | </div>
           <Link to='/signup'><BtLogin>Sign up</BtLogin></Link>
         </CtLogin>
       </CtLogo> 

@@ -25,6 +25,7 @@ export default function Signup() {
 
   const handleReset = () => {
     localStorage.removeItem('form');
+    navigate('/', { replace: true });
   };
 
 
