@@ -80,3 +80,13 @@ body {
     color: #6E6E6E;
     font-family: 'Montserrat', sans-serif;
 }
+
+input {
+    background-color: #6E6E6E;
+}
+
+input:focus {
+    outline: none !important;
+    border-color: #ecab00;
+    box-shadow: 0 0 10px #ecab00;
+}
