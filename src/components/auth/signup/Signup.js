@@ -10,7 +10,6 @@ export default function Signup() {
 
   let navigate = useNavigate();
 
-
   const handleChange = (e) => {
     e.persist();
     setForm({
@@ -27,7 +26,6 @@ export default function Signup() {
     localStorage.removeItem('form');
     navigate('/', { replace: true });
   };
-
 
   return (
     <>

@@ -5,6 +5,7 @@ import notFoundImg from '../../assets/img/notFoundImg.jpg';
 import { CtImg, CtShipCard, CtSubText, CtText, ImgShip, Text } from './Starship.styled';
 import Header from '../header/Header';
 import Loader from '../loader/Loader';
+import Pilots from '../pilots/Pilots';
 
 export default function Starship() {
 
@@ -24,7 +25,7 @@ export default function Starship() {
       setImageExists(true);
       setLoading(false);
     }
-  }).catch(error => console.log(error.response.statusText));
+  }).catch(error => console.log(error.response.status));
 
   return (
     <>
@@ -60,6 +61,8 @@ export default function Starship() {
             </div>
         </CtSubText>
         
+        <Pilots ship={ship}/>
+
      </CtShipCard>
     </>
   )

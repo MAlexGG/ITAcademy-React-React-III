@@ -33,7 +33,7 @@ export default function Login() {
         <Header />
         <CtLoginForm onSubmit={handleSubmit}>
           <InputLogin type='text' placeholder='Mail' name='mail' required onChange={handleChange}/>
-          <InputLogin type='text' placeholder='Password' name='password' required onChange={handleChange} />
+          <InputLogin type='password' placeholder='Password' name='password' required onChange={handleChange} />
           <CtButtonsForm>
             <BtForm type='submit'>Log in</BtForm>
             <BtForm type='reset' onClick={handleReset}>Cancel</BtForm>

@@ -28,7 +28,7 @@ function Router() {
             <Routes>
                 <Route path="/" element={<App />} />
                 <Route path="/starships" element={<AuthShips><Starships/></AuthShips>} />
-                <Route path="/starship/:id" element={<Starship />} />
+                <Route path="/starship/:id" element={<AuthShips><Starship /></AuthShips>} />
                 <Route path="/login" element={<AuthRoute><Login /></AuthRoute>} />
                 <Route path="/signup" element={<AuthRoute><Signup/></AuthRoute>}/>
             </Routes>
