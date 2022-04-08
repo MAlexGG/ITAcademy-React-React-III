@@ -6,6 +6,7 @@ import { CtImg, CtShipCard, CtSubText, CtText, ImgShip, Text } from './Starship.
 import Header from '../header/Header';
 import Loader from '../loader/Loader';
 import Pilots from '../pilots/Pilots';
+import Films from '../films/Films';
 
 export default function Starship() {
 
@@ -61,7 +62,8 @@ export default function Starship() {
             </div>
         </CtSubText>
         
-        <Pilots ship={ship}/>
+        <Pilots ship={ship} />
+        <Films ship={ship}/>
 
      </CtShipCard>
     </>
