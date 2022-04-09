@@ -42,9 +42,6 @@ export default function Films({ ship }) {
                 </CtFilms> :
                 <div></div>  
           }
-           
-        
-      
       </>
   )
 }

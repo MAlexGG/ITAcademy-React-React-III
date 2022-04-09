@@ -47,7 +47,6 @@ export default function Starships() {
         }
         <BtViewMore onClick={viewMore}>View More</BtViewMore>
       </CtStarships>
-
     </>
   )
 }
