@@ -1,8 +1,11 @@
 import { screen, render } from "@testing-library/react";
-import Home from "./Home";
+import Router from '../router/router';
 
-test('should show a starships button', () => {
-    render(<Home/>);
-    const btn = screen.getByRole('button', {name: /starships/i});
+test('should show a home button', () => {
+    render(<Router/>);
+    const btn = screen.getByRole('button', {name: /HOME/});
     expect(btn).toBeInTheDocument();
+
+   /* // eslint-disable-next-line testing-library/no-debugging-utils
+    screen.debug(); */
 })
