@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import App from "../../App";
-import Login from "../auth/login/Login";
-import Signup from "../auth/signup/Signup";
-import Starship from "../starship/Starship";
-import Starships from "../starships/Starships";
+import Login from "../../components/auth/login/Login";
+import Signup from "../../components/auth/signup/Signup";
+import Starship from "../../components/starship/Starship";
+import Starships from "../../components/starships/Starships";
 
 
 function Router() {

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { BtStarships, CtHome, CtInfo, CtShipsImg, ImgPrincipal, ImgShips, TxtButton, TxtHome } from './Home.styled';
-import Header from '../header/Header';
+import Header from '../../components/header/Header';
 import ships from '../../assets/img/ships.jpg';
 import imgPrincipal from '../../assets/img/starwars01.png';
 

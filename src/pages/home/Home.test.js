@@ -1,5 +1,5 @@
 import { screen, render } from "@testing-library/react";
-import Router from '../router/router';
+import Router from '../../application/router/router';
 
 test('should show a home button', () => {
     render(<Router/>);

@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../../header/Header';
 import { BtForm, CtButtonsForm, CtSignup, CtSignupForm, InputSignup } from './Signup.styled';
-import { useLocalStorage } from '../../localstorage/useLocalStorage';
+import { useLocalStorage } from '../../../application/localstorage/useLocalStorage';
 import { useNavigate } from 'react-router-dom';
 
 export default function Signup() {

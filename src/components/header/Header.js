@@ -2,7 +2,7 @@ import React from 'react';
 import { CtNavBar, Logo, PageNavBar } from './Header.styled';
 import SWLogo from '../../assets/img/starwarsLogo.png';
 import { Link, useNavigate } from 'react-router-dom';
-import { BtLogin, CtLogin, CtLogo } from '../home/Home.styled';
+import { BtLogin, CtLogin, CtLogo } from '../../pages/home/Home.styled';
 
 export default function Header() {
 
